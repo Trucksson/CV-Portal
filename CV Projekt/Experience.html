@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Experience</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="About.html">About Me</a></li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Education.html">Education</a></li>
+        <li><a href="Experience.html" class="active">Experience</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="experience-container">
+      <h1>My Experience</h1>
+      <div class="experience-content">
+        <div class="experience-box">
+          <h2>Projects</h2>
+          <div class="project-images">
+
+            <!-- 🟢 Projekt 1: Bank -->
+            <div class="project-wrapper">
+              <input type="checkbox" id="modal-toggle1" class="modal-toggle" hidden>
+              <div class="project-card">
+                <a href="https://github.com/DavidAndersson6/Grupparbete-Bank" target="_blank">
+                  <img src="Pictures/FlameLogo.avif" class="experience-image">
+                </a>
+                <label for="modal-toggle1" class="open-modal-btn">Bankprojekt</label>
+              </div>
+              <div class="modal-css">
+                <label for="modal-toggle1" class="modal-overlay"></label>
+                <div class="modal-box">
+                  <label for="modal-toggle1" class="modal-close">&times;</label>
+                  <h3>Bankprojekt</h3>
+                  <p>Ett grupp projekt där vi tillsamans har skapat en bank miljö i C# inuti konsolen där man kan tex. se transaktioner valutor mm.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 🟢 Projekt 2: Schack -->
+            <div class="project-wrapper">
+              <input type="checkbox" id="modal-toggle2" class="modal-toggle" hidden>
+              <div class="project-card">
+                <a href="https://github.com/Trucksson/ChessBoard" target="_blank">
+                  <img src="Pictures/ChessboardLogo.png" class="experience-image">
+                </a>
+                <label for="modal-toggle2" class="open-modal-btn">Schackbräde</label>
+              </div>
+              <div class="modal-css">
+                <label for="modal-toggle2" class="modal-overlay"></label>
+                <div class="modal-box">
+                  <label for="modal-toggle2" class="modal-close">&times;</label>
+                  <h3>Schackbräde</h3>
+                  <p>Ett enkelt C# projekt som skapar ett Schackbräde inuti konsolen</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="experience-box">
+          <h2>CV Information</h2>
+          <p>
+            Hej mitt namn är Henric Kurtsson. Jag har väldigt god erfarenhet inom Lager och logistik jag har jobbat inom företag så som Alfalaval KH maskin Din Bil. mm. och har jobbat inom många affärs och IT system så som SAP, Automaster och Microsoft D365 har körkort och Truckkort och studerar nu heltid för en utbildning som Systemutvecklare .NET
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>  <div id="easteregg2" style="position: fixed; bottom: 20px; right: 20px; font-size: 30px; cursor: pointer;">🤘</div></footer>
+  <script src="Script.js"></script>
+</body>
+</html>
