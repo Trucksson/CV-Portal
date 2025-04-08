@@ -252,7 +252,7 @@ body {
     display: none; /* Tar bort pilen (valfritt) */
   }
 
-/* === RESPONSIV DESIGN FÖR EXPERIENCE === */
+/* */
 @media (max-width: 768px) {
     .experience-content {
         flex-direction: column; /* Gör sektionen staplad istället för bred */
@@ -295,6 +295,13 @@ body {
 .education-box p {
     font-size: 16px;
     color: #555;
+    
+    
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*RESPONSIV DESIGN FÖR EDUCATION*/

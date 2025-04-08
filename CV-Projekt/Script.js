@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Aktiverarr aktuell meny länk
+    // Aktiverar aktuell meny länk
     let currentPage = window.location.pathname.split("/").pop();
     let navLinks = document.querySelectorAll("nav ul li a");
 
@@ -9,29 +9,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Easteregg 1337 Peter Griffin
-    let code = [];
-    const secretCode = [49, 51, 51, 55];
+    // Hitta rätt path 
+    let pathPrefix = window.location.pathname.includes("CV-Projekt") ? "" : "CV-Projekt/";
 
-    document.addEventListener("keydown", function (e) {
-        code.push(e.keyCode);
-        if (code.length > 4) code.shift();
+    // Peter Griffin Easteregg
+    let inputBuffer = "";
 
-        if (code.join() === secretCode.join()) {
-            document.body.style.backgroundImage = "url('Pictures/PeterGriffin.jpg')";
+    document.addEventListener("keydown", function (event) {
+        inputBuffer += event.key;
+        if (inputBuffer.length > 4) {
+            inputBuffer = inputBuffer.slice(-4);
+        }
+
+        if (inputBuffer.includes("1337")) {
+            document.body.style.backgroundImage = `url('${pathPrefix}Pictures/PeterGriffin.jpg')`;
+            document.body.style.backgroundSize = "cover";
+
             alert("Du vart just Peter Griffind");
+            inputBuffer = "";
         }
     });
 
-    // Easteregg2 – Rock emoji klick
+    // Rock Emoji easter egg (klick)
     const rockEmoji = document.getElementById("easteregg2");
 
     if (rockEmoji) {
         rockEmoji.addEventListener("click", function () {
-            document.body.style.backgroundImage = "url('Pictures/GameOver.jpg')";
+            document.body.style.backgroundImage = `url('${pathPrefix}Pictures/GameOver.jpg')`;
             document.body.style.backgroundSize = "cover";
-            document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundAttachment = "fixed";
+
         });
     }
 });
